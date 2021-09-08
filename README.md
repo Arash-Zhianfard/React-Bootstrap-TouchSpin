@@ -9,7 +9,7 @@
 
 ## Installation
 
-`npm install react-bootstrap-touchspine`
+`npm install react-bootstrap-touch-spine`
 
 
 
