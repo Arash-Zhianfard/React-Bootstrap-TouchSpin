@@ -31,7 +31,10 @@ sign={"#"}
 signAlignment={Alignment.Left}
 step={1}
 initValue={0}
-size={BsSize.Small} />
+size={BsSize.Small} 
+max={100} 
+min={-20}
+/>
 ```
 ```ts
 <TouchSpin
@@ -39,7 +42,10 @@ sign={"#"}
 signAlignment={Alignment.Right}
 step={1}
 initValue={0}
-size={BsSize.Small} />
+size={BsSize.Small} 
+max={5000} 
+min={0}
+/>
 ```
 
 
