@@ -16,12 +16,3 @@ export declare enum BsSize {
     Medium = "md",
     Large = "lg"
 }
-export declare enum BsPaddingY {
-    Zero = "py-0",
-    One = "py-1",
-    Two = "py-2",
-    Three = "py-3",
-    Four = "py-4",
-    Five = "py-5",
-    Auto = "py-auto"
-}
