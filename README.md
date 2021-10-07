@@ -45,6 +45,7 @@ initValue={0}
 size={BsSize.Small} 
 max={5000} 
 min={0}
+decimals={1}
 />
 ```
 

@@ -8,6 +8,7 @@ const TouchSpin = ({
   min = 0,
   max = 10000,
   size = BsSize.Small,
+  decimals=0
 }: TouchSpinProps) => {
   const [counter, setCounter] = useState(initValue);
   const intervalRef = useRef<null | any>(null);
@@ -53,7 +54,6 @@ const TouchSpin = ({
       decreaseByInterval();
     }, interval);
   };
-
   const decreaseByInterval = () => {
     stopCounter();
     if (interval > 50) interval = interval - 10;
@@ -91,7 +91,7 @@ const TouchSpin = ({
           <span className="input-group-text">{sign}</span>
         )}
       </div>
-      <input type="text" className="form-control" value={counter} />
+      <input type="text" className="form-control" value={counter.toFixed(decimals)} />
       <div className="input-group-append">
         {sign && signAlignment === Alignment.Right && (
           <span className="input-group-text">{sign}</span>
