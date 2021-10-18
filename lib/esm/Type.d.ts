@@ -7,6 +7,7 @@ export interface TouchSpinProps {
     max?: number;
     size?: BsSize;
     decimals?: number;
+    counterHandler: (e: number) => void;
 }
 export declare enum Alignment {
     Right = 1,

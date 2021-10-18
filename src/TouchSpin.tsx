@@ -1,5 +1,5 @@
-import React, { useState, useRef,  useEffect } from "react";
-import { Alignment, TouchSpinProps, BsSize } from "./Type";
+import React, { useState, useRef, useEffect } from 'react';
+import { Alignment, TouchSpinProps, BsSize } from './Type';
 const TouchSpin = ({
   signAlignment = Alignment.Left,
   sign,
@@ -8,7 +8,8 @@ const TouchSpin = ({
   min = 0,
   max = 10000,
   size = BsSize.Small,
-  decimals=0
+  decimals = 0,
+  counterHandler
 }: TouchSpinProps) => {
   const [counter, setCounter] = useState(initValue);
   const intervalRef = useRef<null | any>(null);
@@ -31,6 +32,7 @@ const TouchSpin = ({
   };
   useEffect(() => {
     isOutOfRange();
+    counterHandler(counter);
   }, [counter]);
   const increase = () => {
     setCounter((prevCounter) => prevCounter + step);
@@ -91,7 +93,13 @@ const TouchSpin = ({
           <span className="input-group-text">{sign}</span>
         )}
       </div>
-      <input type="text" className="form-control" value={counter.toFixed(decimals)} />
+      <input
+        type="text"
+        className="form-control"
+        value={counter.toFixed(decimals)}
+        readOnly
+        style={{ background: 'white' }}
+      />
       <div className="input-group-append">
         {sign && signAlignment === Alignment.Right && (
           <span className="input-group-text">{sign}</span>
