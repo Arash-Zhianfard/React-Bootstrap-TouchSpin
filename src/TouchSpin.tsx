@@ -1,15 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Alignment, TouchSpinProps, BsSize } from './Type';
+import { useState, useRef, useEffect } from 'react';
+import SideButtons from './SideButtons';
+import VerticalButtons from './VerticalButtons';
+import { Alignment, TouchSpinProps } from './Type';
 const TouchSpin = ({
   signAlignment = Alignment.Left,
   sign,
   initValue = 0,
-  step = 1,
+  step = 0,
   min = 0,
-  max = 10000,
-  size = BsSize.Small,
+  max = 20,
   decimals = 0,
-  counterHandler
+  verticalButtons,
+  verticalUpClass,
+  verticalDownClass,
+  counterHandler,
 }: TouchSpinProps) => {
   const [counter, setCounter] = useState(initValue);
   const intervalRef = useRef<null | any>(null);
@@ -35,9 +39,11 @@ const TouchSpin = ({
     counterHandler(counter);
   }, [counter]);
   const increase = () => {
+    isOutOfRange();
     setCounter((prevCounter) => prevCounter + step);
   };
   const decrease = () => {
+    isOutOfRange();
     setCounter((prevCounter) => prevCounter - step);
   };
   const increaseHandler = () => {
@@ -56,6 +62,7 @@ const TouchSpin = ({
       decreaseByInterval();
     }, interval);
   };
+
   const decreaseByInterval = () => {
     stopCounter();
     if (interval > 50) interval = interval - 10;
@@ -78,41 +85,26 @@ const TouchSpin = ({
       intervalRef.current = null;
     }
   };
-
-  return (
-    <div className={`input-group input-group-${size}`}>
-      <div className="input-group-prepend">
-        <button
-          className={`input-group-text `}
-          onMouseDown={decreaseHandler}
-          onMouseUp={stopCounter}
-        >
-          -
-        </button>
-        {sign && signAlignment === Alignment.Left && (
-          <span className="input-group-text">{sign}</span>
-        )}
-      </div>
-      <input
-        type="text"
-        className="form-control"
-        value={counter.toFixed(decimals)}
-        readOnly
-        style={{ background: 'white' }}
-      />
-      <div className="input-group-append">
-        {sign && signAlignment === Alignment.Right && (
-          <span className="input-group-text">{sign}</span>
-        )}
-        <button
-          className="input-group-text "
-          onMouseDown={increaseHandler}
-          onMouseUp={stopCounter}
-        >
-          +
-        </button>
-      </div>
-    </div>
+  return verticalButtons ? (
+    <SideButtons
+      onIncreaseHandler={increaseHandler}
+      OnDecreaseHandler={decreaseHandler}
+      counter={counter}
+      decimals={decimals}
+      signAlignment={signAlignment}
+      sign={sign}
+      OnStopCounter={stopCounter}
+    />
+  ) : (
+    <VerticalButtons
+      onIncreaseHandler={increaseHandler}
+      OnDecreaseHandler={decreaseHandler}
+      counter={counter}
+      decimals={decimals}
+      OnStopCounter={stopCounter}
+      verticalDownClass={verticalDownClass}
+      verticalUpClass={verticalUpClass}
+    />
   );
 };
 export default TouchSpin;
