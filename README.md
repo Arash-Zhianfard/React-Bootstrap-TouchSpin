@@ -2,12 +2,6 @@
 #### No need for Jquery
 <HR />
 
-![](https://i.ibb.co/XyxSGt6/touch-Spine-without-Sign.png)
-![](https://i.ibb.co/d2Wh6CD/touch-Spine-left-Sign.png)
-![](https://i.ibb.co/nBFW3yM/touch-Spine-right-Sign.png)
-
-
-
 # Getting Started
 
 ## Installation
@@ -38,6 +32,7 @@ const App = () => {
   );
 };
 ```
+![](https://i.ibb.co/XyxSGt6/touch-Spine-without-Sign.png)
 
 ```ts
 <TouchSpin
@@ -45,24 +40,49 @@ const App = () => {
   signAlignment={Alignment.Left}
   step={1}
   initValue={0}
-  size={BsSize.Small}
   max={100}
   min={-20}
   decimals={1}
   counterHandler={myCounterHandler}
 />
 ```
-
+![](https://i.ibb.co/d2Wh6CD/touch-Spine-left-Sign.png)
 ```ts
 <TouchSpin
   sign={'#'}
   signAlignment={Alignment.Right}
   step={1}
   initValue={0}
-  size={BsSize.Small}
   max={5000}
   min={0}
   decimals={1}
   counterHandler={myCounterHandler}
 />
 ```
+![](https://i.ibb.co/nBFW3yM/touch-Spine-right-Sign.png)
+
+```ts
+<TouchSpin
+ step={1.02}
+ decimals={1}
+ initValue={0}
+ counterHandler={myCounterHandler}
+ verticalButtons={true}
+ />
+```
+ ![](https://i.ibb.co/9Yn3247/up.jpg)
+ 
+| Parameter |DefaultValue|Optional| Description |
+| --- | --- | --- | --- |
+| signAlignment|**Left** if sign defined |*|alignment for sign|
+| sign|-|*|sing to show on left/right of the touchspin |
+| initValue|0|*|initial value|
+| step|1|*|Incremental/decremental step on up/down change|
+| min|0|*|	Minimum value|
+| max|200000|*|Maximum value|
+| inputStyle|||
+| decimals|0|*|Number of decimal points|
+| counterHandler|-|-|handler to get counter value |
+| verticalButtons|false|*|Enables vertical up/down buttons|
+| verticalUpClass|"bi bi-caret-up-fill"|*|bootstrap icon's class name for up button if vertical buttons mode enabled|
+| verticalDownClass|"bi bi-caret-down-fill"|*|bootstrap icon's class name for down button if vertical buttons mode enabled|
