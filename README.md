@@ -33,6 +33,7 @@ const App = () => {
 };
 ```
 ![](https://i.ibb.co/XyxSGt6/touch-Spine-without-Sign.png)
+
 ---
 2-Sign On the left
 ```ts
@@ -48,6 +49,7 @@ const App = () => {
 />
 ```
 ![](https://i.ibb.co/d2Wh6CD/touch-Spine-left-Sign.png)
+
 ---
 3-Sign On the right
 ```ts
@@ -63,6 +65,7 @@ const App = () => {
 />
 ```
 ![](https://i.ibb.co/nBFW3yM/touch-Spine-right-Sign.png)
+
 ---
 4-Vertical buttons
 
@@ -75,7 +78,8 @@ const App = () => {
  verticalButtons={true}
  />
 ```
- ![](https://i.ibb.co/9Yn3247/up.jpg)
+ ![](https://i.ibb.co/hDKFSkB/up.jpg)
+
  ---
 | Parameter |DefaultValue   |Optional| Description |
 | --- | --- | --- | --- |
