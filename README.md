@@ -14,12 +14,13 @@
 
 ```js
 import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 ```
 
 **Bootstrap 4.6.0 has already installed.**
 
 ### The component can be used in following ways
-1-simple
+1-Simple
 ```ts
 const App = () => {
   const myCounterHandler = (counter: number) => {
