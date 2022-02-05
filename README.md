@@ -19,7 +19,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 **Bootstrap 4.6.0 has already installed.**
 
 ### The component can be used in following ways
-
+1-simple
 ```ts
 const App = () => {
   const myCounterHandler = (counter: number) => {
@@ -33,7 +33,8 @@ const App = () => {
 };
 ```
 ![](https://i.ibb.co/XyxSGt6/touch-Spine-without-Sign.png)
-
+---
+2-Sign On the left
 ```ts
 <TouchSpin
   sign={'#'}
@@ -47,6 +48,8 @@ const App = () => {
 />
 ```
 ![](https://i.ibb.co/d2Wh6CD/touch-Spine-left-Sign.png)
+---
+3-Sign On the right
 ```ts
 <TouchSpin
   sign={'#'}
@@ -60,6 +63,8 @@ const App = () => {
 />
 ```
 ![](https://i.ibb.co/nBFW3yM/touch-Spine-right-Sign.png)
+---
+4-Vertical buttons
 
 ```ts
 <TouchSpin
@@ -71,8 +76,8 @@ const App = () => {
  />
 ```
  ![](https://i.ibb.co/9Yn3247/up.jpg)
- 
-| Parameter |DefaultValue|Optional| Description |
+ ---
+| Parameter |DefaultValue   |Optional| Description |
 | --- | --- | --- | --- |
 | signAlignment|**Left** if sign defined |*|alignment for sign|
 | sign|-|*|sing to show on left/right of the touchspin |
