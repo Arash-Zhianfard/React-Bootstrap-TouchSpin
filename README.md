@@ -89,7 +89,6 @@ const App = () => {
 | step|1|*|Incremental/decremental step on up/down change|
 | min|0|*|	Minimum value|
 | max|200000|*|Maximum value|
-| inputStyle|||
 | decimals|0|*|Number of decimal points|
 | counterHandler|-|-|handler to get counter value |
 | verticalButtons|false|*|Enables vertical up/down buttons|
