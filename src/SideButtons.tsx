@@ -7,6 +7,8 @@ const SideButtons = ({
   sign,
   counter,
   decimals,
+  parentStyle,
+  inputStyle,
 }: ChildProps) => {
   const increaseHandler = () => {
     onIncreaseHandler();
@@ -19,7 +21,7 @@ const SideButtons = ({
   };
 
   return (
-    <div className={`input-group`}>
+    <div className={`input-group`}    style={parentStyle}>
       <div className="input-group-prepend">
         <button
           className={`input-group-text `}
@@ -37,7 +39,7 @@ const SideButtons = ({
         className="form-control"
         value={counter.toFixed(decimals)}
         readOnly
-        style={{ background: 'white' }}
+        style={inputStyle}
       />
       <div className="input-group-append">
         {sign && signAlignment === Alignment.Right && (

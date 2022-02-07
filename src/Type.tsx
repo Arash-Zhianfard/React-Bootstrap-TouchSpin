@@ -5,12 +5,13 @@ export interface TouchSpinProps {
   step?: number;
   min?: number;
   max?: number;
-  inputStyle?: any;
   decimals?: number;
   counterHandler: (e: number) => void;
   verticalButtons?: boolean;
   verticalUpClass?: string;
   verticalDownClass?: string;
+  parentStyle?: React.CSSProperties;
+  inputStyle?: React.CSSProperties;
 }
 export enum Alignment {
   Right = 1,
@@ -36,4 +37,6 @@ export type ChildProps = {
   decimals?: number;
   verticalUpClass?: string;
   verticalDownClass?: string;
+  parentStyle?: React.CSSProperties;
+  inputStyle?: React.CSSProperties;
 };

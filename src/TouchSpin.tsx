@@ -13,6 +13,8 @@ const TouchSpin = ({
   verticalButtons,
   verticalUpClass,
   verticalDownClass,
+  parentStyle,
+  inputStyle,
   counterHandler,
 }: TouchSpinProps) => {
   const [counter, setCounter] = useState(initValue);
@@ -94,6 +96,8 @@ const TouchSpin = ({
       signAlignment={signAlignment}
       sign={sign}
       OnStopCounter={stopCounter}
+      parentStyle={parentStyle}
+      inputStyle={inputStyle}
     />
   ) : (
     <VerticalButtons
@@ -104,6 +108,8 @@ const TouchSpin = ({
       OnStopCounter={stopCounter}
       verticalDownClass={verticalDownClass}
       verticalUpClass={verticalUpClass}
+      parentStyle={parentStyle}
+      inputStyle={inputStyle}
     />
   );
 };
