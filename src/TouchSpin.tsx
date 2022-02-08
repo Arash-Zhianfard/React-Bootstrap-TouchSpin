@@ -22,6 +22,7 @@ const TouchSpin = ({
   const maxThresholdRef = useRef<boolean>(false);
   const minThresholdRef = useRef<boolean>(false);
   var interval = 250;
+  const defaultParentStyle: React.CSSProperties = { width: 300, height: 40 }
   useEffect(() => {
     max = max - (max % step);
     min = Math.abs(min) - (Math.abs(min) % step);
@@ -96,7 +97,7 @@ const TouchSpin = ({
       OnStopCounter={stopCounter}
       verticalDownClass={verticalDownClass}
       verticalUpClass={verticalUpClass}
-      parentStyle={parentStyle}
+      parentStyle={{...defaultParentStyle, ...parentStyle}}
       inputStyle={inputStyle}
     />
   ) : (
@@ -108,7 +109,7 @@ const TouchSpin = ({
       signAlignment={signAlignment}
       sign={sign}
       OnStopCounter={stopCounter}
-      parentStyle={parentStyle}
+      parentStyle={{...defaultParentStyle, ...parentStyle}}
       inputStyle={inputStyle}
     />
   );
