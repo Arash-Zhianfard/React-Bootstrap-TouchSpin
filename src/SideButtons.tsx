@@ -36,7 +36,7 @@ const SideButtons = ({
       </div>
       <input
         type="text"
-        className="form-control"
+        className="form-control myTextInput"
         value={counter.toFixed(decimals)}
         readOnly
         style={inputStyle}
