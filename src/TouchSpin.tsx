@@ -22,7 +22,6 @@ const TouchSpin = ({
   const maxThresholdRef = useRef<boolean>(false);
   const minThresholdRef = useRef<boolean>(false);
   var interval = 250;
-  const defaultParentStyle: React.CSSProperties = { width: 300, height: 40 }
   useEffect(() => {
     max = max - (max % step);
     min = Math.abs(min) - (Math.abs(min) % step);
@@ -65,7 +64,6 @@ const TouchSpin = ({
       decreaseByInterval();
     }, interval);
   };
-
   const decreaseByInterval = () => {
     stopCounter();
     if (interval > 50) interval = interval - 10;
@@ -88,6 +86,13 @@ const TouchSpin = ({
       intervalRef.current = null;
     }
   };
+  const defaultParentStyle: React.CSSProperties = { width: 300, height: 40 };
+  const defaultInputStyle: React.CSSProperties = {
+    display: 'block',
+    borderRadius: '2px',
+    background: 'white',
+    height: 'auto',
+  };
   return verticalButtons ? (
     <VerticalButtons
       onIncreaseHandler={increaseHandler}
@@ -97,8 +102,8 @@ const TouchSpin = ({
       OnStopCounter={stopCounter}
       verticalDownClass={verticalDownClass}
       verticalUpClass={verticalUpClass}
-      parentStyle={{...defaultParentStyle, ...parentStyle}}
-      inputStyle={inputStyle}
+      parentStyle={{ ...defaultParentStyle, ...parentStyle }}
+      inputStyle={{ ...defaultInputStyle, ...inputStyle }}
     />
   ) : (
     <SideButtons
@@ -109,8 +114,8 @@ const TouchSpin = ({
       signAlignment={signAlignment}
       sign={sign}
       OnStopCounter={stopCounter}
-      parentStyle={{...defaultParentStyle, ...parentStyle}}
-      inputStyle={inputStyle}
+      parentStyle={{ ...defaultParentStyle, ...parentStyle }}
+      inputStyle={{ ...defaultInputStyle, ...inputStyle }}
     />
   );
 };

@@ -6,7 +6,6 @@
   }
   
   .bootstrap-touchspin .input-group-btn-vertical > .btn {
-    position: absolute;
     right: 0;
     height: 50%;
     padding: 0;
@@ -29,10 +28,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .myTextInput {
-    display: block !important;
-    border-radius: 2px !important;
-    background: white !important;
-    height: auto !important;
   }

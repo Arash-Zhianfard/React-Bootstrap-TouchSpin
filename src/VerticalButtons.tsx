@@ -25,13 +25,13 @@ const VerticalButtons = ({
     ? verticalDownClass
     : 'bi bi-caret-down-fill';
   return (
-    <div    style={parentStyle} className={`input-group  bootstrap-touchspin`}>
+    <div style={parentStyle} className={`input-group  bootstrap-touchspin`}>
       <span className="input-group-addon bootstrap-touchspin-prefix"></span>
       <input
         type="text"
         readOnly={true}
         value={counter.toFixed(decimals)}
-        className="form-control myTextInput"
+        className="form-control"
         style={inputStyle}
       />
       <span className="input-group-addon bootstrap-touchspin-postfix"></span>
