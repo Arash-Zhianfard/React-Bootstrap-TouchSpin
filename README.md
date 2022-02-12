@@ -95,3 +95,5 @@ const App = () => {
 | verticalButtons|false|*|Enables vertical up/down buttons|
 | verticalUpClass|"bi bi-caret-up-fill"|*|bootstrap icon's class name for up button if vertical buttons mode enabled|
 | verticalDownClass|"bi bi-caret-down-fill"|*|bootstrap icon's class name for down button if vertical buttons mode enabled|
+parentStyle|-|*|style for the parent container|
+inputStyle|-|*|input's style|
