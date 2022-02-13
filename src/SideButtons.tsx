@@ -1,4 +1,4 @@
-import { Alignment, ChildProps } from './Type';
+import { Alignment, ChildProps } from "./Type";
 const SideButtons = ({
   onIncreaseHandler,
   OnDecreaseHandler,
@@ -21,12 +21,12 @@ const SideButtons = ({
   };
 
   return (
-    <div className={`input-group`}    style={parentStyle}>
+    <div className={`input-group`} style={parentStyle}>
       <div className="input-group-prepend">
         <button
-          className={`input-group-text `}
           onMouseDown={decreaseHandler}
           onMouseUp={stopCounter}
+          className="btn-left"
         >
           -
         </button>
@@ -36,7 +36,7 @@ const SideButtons = ({
       </div>
       <input
         type="text"
-        className="form-control myTextInput"
+        className="form-control "
         value={counter.toFixed(decimals)}
         readOnly
         style={inputStyle}
@@ -46,9 +46,9 @@ const SideButtons = ({
           <span className="input-group-text">{sign}</span>
         )}
         <button
-          className="input-group-text "
           onMouseDown={increaseHandler}
           onMouseUp={stopCounter}
+          className="btn-right"
         >
           +
         </button>

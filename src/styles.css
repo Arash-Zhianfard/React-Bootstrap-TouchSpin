@@ -1,31 +1,52 @@
 .bootstrap-touchspin .input-group-btn-vertical {
-    position: absolute;
-    right: -32px;
-    height: 100%;
-    z-index: 11;
-  }
-  
-  .bootstrap-touchspin .input-group-btn-vertical > .btn {
-    right: 0;
-    height: 50%;
-    padding: 0;
-    width: 2em;
-    text-align: center;
-    line-height: 0.75;
-  }
-  
-  .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
-    border-radius: 0 4px 0 0;
-    /* top: 0; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
-    border-radius: 0 0 4px 0;
-    /* bottom: 0; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  height: 100%;
+  z-index: 11;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical > .btn {
+  right: 0;
+  height: 50%;
+  padding: 0;
+  width: 1.2em;
+  text-align: center;
+  line-height: 0.75;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+  border-radius: 0 3px 0 0;
+  /* top: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  border-radius: 0 0 3px 0;
+  /* bottom: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bootstrap-touchspin .input-group-btn-vertical .bi {
+  font-size: 10px;
+}
+.input-group-prepend {
+  height: inherit;
+}
+.input-group-append {
+  height: inherit;
+}
+.input-group button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  border: 1px solid #ced4da;
+  font-size: 10px;
+}
+.btn-right {
+  border-radius: 0 2px 2px 0;
+}
+.btn-left {
+  border-radius: 2px 0 0px 2px;
+}
