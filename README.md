@@ -15,6 +15,7 @@
 ```js
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "react-bootstrap-touch-spine/lib/dist/styles.css";
 ```
 
 **Bootstrap 4.6.0 has already installed.**
