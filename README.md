@@ -1,4 +1,4 @@
-# React-Bootstrap-TouchSpine
+# React-Bootstrap-TouchSpin
 #### No need for Jquery
 <HR />
 
@@ -6,7 +6,7 @@
 
 ## Installation
 
-`npm install react-bootstrap-touch-spine`
+`npm i react-bootstrap-touchspin`
 
 ## Usage
 
@@ -15,7 +15,7 @@
 ```js
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "react-bootstrap-touch-spine/lib/dist/styles.css";
+import "react-bootstrap-touchspin/lib/dist/styles.css";
 ```
 
 **Bootstrap 4.6.0 has already installed.**

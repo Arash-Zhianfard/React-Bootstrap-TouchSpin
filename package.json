@@ -1,7 +1,7 @@
 {
-  "name": "react-bootstrap-touch-spine",
-  "version": "2.5.0",
-  "description": "React-Bootstrap-Touch-Spine",
+  "name": "react-bootstrap-touchspin",
+  "version": "1.1.0",
+  "description": "React-Bootstrap-Touch-Spin",
   "author": "Arash Zhianfard",
   "license": "MIT",
   "repository": "https://github.com/Arash-Zhianfard/React-Bootstrap-TouchSpine",
@@ -9,7 +9,7 @@
     "react",
     "hooks",
     "bootstrap",
-    "TouchSpine",
+    "TouchSpin",
     "component"
   ],
   "main": "./lib/cjs/index.js",
