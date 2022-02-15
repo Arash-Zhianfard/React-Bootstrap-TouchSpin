@@ -54,7 +54,7 @@ const TouchSpin = ({
   const increaseHandler = () => {
     if (!maxThresholdRef.current) increase();
     minThresholdRef.current = false;
-    if (intervalRef.current) return;
+    if (intervalRef.current || maxThresholdRef.current) return;
     intervalRef.current = setInterval(() => {
       increaseByInterval();
     }, interval);
@@ -62,7 +62,7 @@ const TouchSpin = ({
   const decreaseHandler = () => {
     if (!minThresholdRef.current) decrease();
     maxThresholdRef.current = false;
-    if (intervalRef.current) return;
+    if (intervalRef.current || minThresholdRef.current) return;
     intervalRef.current = setInterval(() => {
       decreaseByInterval();
     }, interval);
@@ -96,10 +96,6 @@ const TouchSpin = ({
     height: 'inherit',
     fontSize: '12px',
   };
-  const verticalDefaultInputStyle = {
-    ...defaultInputStyle,
-    borderRadius: '0 3px 3px 0',
-  };
   return verticalButtons ? (
     <VerticalButtons
       onIncreaseHandler={increaseHandler}
@@ -110,7 +106,7 @@ const TouchSpin = ({
       verticalDownClass={verticalDownClass}
       verticalUpClass={verticalUpClass}
       parentStyle={{ ...defaultParentStyle, ...parentStyle }}
-      inputStyle={{ ...verticalDefaultInputStyle, ...inputStyle }}
+      inputStyle={{ ...defaultInputStyle, ...inputStyle }}
     />
   ) : (
     <SideButtons
