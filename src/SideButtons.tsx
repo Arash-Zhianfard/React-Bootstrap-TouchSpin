@@ -1,4 +1,4 @@
-import { Alignment, ChildProps } from "./Type";
+import { Alignment, SideProps } from "./Type";
 const SideButtons = ({
   onIncreaseHandler,
   OnDecreaseHandler,
@@ -9,7 +9,7 @@ const SideButtons = ({
   decimals,
   parentStyle,
   inputStyle,
-}: ChildProps) => {
+}: SideProps) => {
   const increaseHandler = () => {
     onIncreaseHandler();
   };

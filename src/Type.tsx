@@ -19,17 +19,21 @@ export enum Alignment {
   Left,
 }
 
-export type ChildProps = {
+export interface ChildProps {
   onIncreaseHandler: () => void;
   OnDecreaseHandler: () => void;
   OnStopCounter: () => void;
-  signAlignment?: Alignment;
-  sign?: string;
   counter: number;
   decimals?: number;
-  verticalUpClass?: string;
-  verticalDownClass?: string;
   parentStyle?: React.CSSProperties;
   inputStyle?: React.CSSProperties;
+}
+export interface VerticalProps extends ChildProps {
+  verticalUpClass?: string;
+  verticalDownClass?: string;
   iconSize?: number;
-};
+}
+export interface SideProps extends ChildProps {
+  signAlignment?: Alignment;
+  sign?: string;
+}

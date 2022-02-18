@@ -1,4 +1,4 @@
-import { ChildProps } from './Type';
+import { VerticalProps } from './Type';
 
 const VerticalButtons = ({
   onIncreaseHandler,
@@ -11,7 +11,7 @@ const VerticalButtons = ({
   parentStyle,
   inputStyle,
   iconSize = 11,
-}: ChildProps) => {
+}: VerticalProps) => {
   const increaseHandler = () => {
     onIncreaseHandler();
   };
