@@ -15,6 +15,7 @@ const TouchSpin = ({
   verticalDownClass,
   parentStyle,
   inputStyle,
+  iconSize,
   counterHandler,
 }: TouchSpinProps) => {
   const [counter, setCounter] = useState(initValue);
@@ -107,6 +108,7 @@ const TouchSpin = ({
       verticalUpClass={verticalUpClass}
       parentStyle={{ ...defaultParentStyle, ...parentStyle }}
       inputStyle={{ ...defaultInputStyle, ...inputStyle }}
+      iconSize={iconSize}
     />
   ) : (
     <SideButtons

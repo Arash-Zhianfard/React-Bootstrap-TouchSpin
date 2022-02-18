@@ -10,6 +10,7 @@ const VerticalButtons = ({
   verticalDownClass,
   parentStyle,
   inputStyle,
+  iconSize = 11,
 }: ChildProps) => {
   const increaseHandler = () => {
     onIncreaseHandler();
@@ -24,6 +25,9 @@ const VerticalButtons = ({
   var downClass = verticalDownClass
     ? verticalDownClass
     : 'bi bi-caret-down-fill';
+  var iconFontSize: React.CSSProperties = {
+    fontSize: iconSize,
+  };
   return (
     <div style={parentStyle} className={`input-group  bootstrap-touchspin`}>
       <span className="input-group-addon bootstrap-touchspin-prefix"></span>
@@ -41,14 +45,14 @@ const VerticalButtons = ({
           onMouseDown={increaseHandler}
           onMouseUp={stopCounter}
         >
-          <span className={upClass} />
+          <span className={upClass} style={iconFontSize} />
         </span>
         <span
           className="btn btn-outline-secondary bootstrap-touchspin-down"
           onMouseDown={decreaseHandler}
           onMouseUp={stopCounter}
         >
-          <span className={downClass} />
+          <span className={downClass} style={iconFontSize}/>
         </span>
       </span>
     </div>
