@@ -23,13 +23,13 @@ const SideButtons = ({
   return (
     <div className={`input-group`} style={parentStyle}>
       <div className="input-group-prepend">
-        <button
+      <input
+          type="button"
           onMouseDown={decreaseHandler}
           onMouseUp={stopCounter}
-          className="btn-left"
-        >
-          -
-        </button>
+          className="btn-right"
+          value="-"
+        />
         {sign && signAlignment === Alignment.Left && (
           <span className="input-group-text">{sign}</span>
         )}
@@ -45,13 +45,13 @@ const SideButtons = ({
         {sign && signAlignment === Alignment.Right && (
           <span className="input-group-text">{sign}</span>
         )}
-        <button
+      <input
+          type="button"
           onMouseDown={increaseHandler}
           onMouseUp={stopCounter}
           className="btn-right"
-        >
-          +
-        </button>
+          value="+"
+        />
       </div>
     </div>
   );
