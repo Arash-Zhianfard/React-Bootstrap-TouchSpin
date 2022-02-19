@@ -85,16 +85,17 @@ const App = () => {
  ---
 | Parameter |DefaultValue   |Optional| Description |
 | --- | --- | --- | --- |
-| signAlignment|**Left** if sign defined |*|alignment for sign|
-| sign|-|*|sing to show on left/right of the touchspin |
-| initValue|0|*|initial value|
-| step|1|*|Incremental/decremental step on up/down change|
+| signAlignment|**Left** if sign defined |*|Alignment for sign|
+| sign|-|*|Sing to show on left/right of the touchspin |
+| initValue|0|*|Initial value|
+| step|1|*|Incremental/Decremental step on up/down change|
 | min|0|*|	Minimum value|
 | max|200000|*|Maximum value|
 | decimals|0|*|Number of decimal points|
-| counterHandler|-|-|handler to get counter value |
+| counterHandler|-|-|Handler to get counter value |
 | verticalButtons|false|*|Enables vertical up/down buttons|
-| verticalUpClass|"bi bi-caret-up-fill"|*|bootstrap icon's class name for up button if vertical buttons mode enabled|
-| verticalDownClass|"bi bi-caret-down-fill"|*|bootstrap icon's class name for down button if vertical buttons mode enabled|
-parentStyle|-|*|style for the parent container|
-inputStyle|-|*|input's style|
+| verticalUpClass|"bi bi-caret-up-fill"|*|Bootstrap icon's class name for up button if vertical buttons mode enabled|
+| verticalDownClass|"bi bi-caret-down-fill"|*|Bootstrap icon's class name for down button if vertical buttons mode enabled|
+|iconSize|11px|*|Bootstrap icon's size|
+parentStyle|-|*|Style for the parent container|
+inputStyle|-|*|Input's style|
