@@ -1,8 +1,8 @@
 import { Alignment, SideProps } from "./Type";
 const SideButtons = ({
   onIncreaseHandler,
-  OnDecreaseHandler,
-  OnStopCounter,
+  onDecreaseHandler,
+  onStopCounter,
   signAlignment,
   sign,
   counter,
@@ -14,10 +14,10 @@ const SideButtons = ({
     onIncreaseHandler();
   };
   const decreaseHandler = () => {
-    OnDecreaseHandler();
+    onDecreaseHandler();
   };
   const stopCounter = () => {
-    OnStopCounter();
+    onStopCounter();
   };
 
   return (

@@ -2,8 +2,8 @@ import { VerticalProps } from './Type';
 
 const VerticalButtons = ({
   onIncreaseHandler,
-  OnDecreaseHandler,
-  OnStopCounter,
+  onDecreaseHandler,
+  onStopCounter,
   counter,
   decimals,
   verticalUpClass,
@@ -16,10 +16,10 @@ const VerticalButtons = ({
     onIncreaseHandler();
   };
   const decreaseHandler = () => {
-    OnDecreaseHandler();
+    onDecreaseHandler();
   };
   const stopCounter = () => {
-    OnStopCounter();
+    onStopCounter();
   };
   var upClass = verticalUpClass ? verticalUpClass : 'bi bi-caret-up-fill';
   var downClass = verticalDownClass

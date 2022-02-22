@@ -18,11 +18,10 @@ export enum Alignment {
   Right = 1,
   Left,
 }
-
 export interface ChildProps {
   onIncreaseHandler: () => void;
-  OnDecreaseHandler: () => void;
-  OnStopCounter: () => void;
+  onDecreaseHandler: () => void;
+  onStopCounter: () => void;
   counter: number;
   decimals?: number;
   parentStyle?: React.CSSProperties;

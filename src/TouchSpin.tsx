@@ -100,10 +100,10 @@ const TouchSpin = ({
   return verticalButtons ? (
     <VerticalButtons
       onIncreaseHandler={increaseHandler}
-      OnDecreaseHandler={decreaseHandler}
+      onDecreaseHandler={decreaseHandler}
       counter={counter}
       decimals={decimals}
-      OnStopCounter={stopCounter}
+      onStopCounter={stopCounter}
       verticalDownClass={verticalDownClass}
       verticalUpClass={verticalUpClass}
       parentStyle={{ ...defaultParentStyle, ...parentStyle }}
@@ -113,12 +113,12 @@ const TouchSpin = ({
   ) : (
     <SideButtons
       onIncreaseHandler={increaseHandler}
-      OnDecreaseHandler={decreaseHandler}
+      onDecreaseHandler={decreaseHandler}
       counter={counter}
       decimals={decimals}
       signAlignment={signAlignment}
       sign={sign}
-      OnStopCounter={stopCounter}
+      onStopCounter={stopCounter}
       parentStyle={{ ...defaultParentStyle, ...parentStyle }}
       inputStyle={{ ...defaultInputStyle, ...inputStyle }}
     />
