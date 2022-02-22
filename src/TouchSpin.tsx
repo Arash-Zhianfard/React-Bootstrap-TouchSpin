@@ -90,6 +90,15 @@ const TouchSpin = ({
       intervalRef.current = null;
     }
   };
+  const wheelHandler = (e: React.WheelEvent<HTMLInputElement>) => {
+    if (e.deltaY < 0) {
+      increaseHandler();
+    } else {
+      decreaseHandler();
+    }
+    stopCounter();
+  };
+
   const defaultParentStyle: React.CSSProperties = { width: 250, height: 30 };
   const defaultInputStyle: React.CSSProperties = {
     display: 'block',
@@ -109,6 +118,7 @@ const TouchSpin = ({
       parentStyle={{ ...defaultParentStyle, ...parentStyle }}
       inputStyle={{ ...defaultInputStyle, ...inputStyle }}
       iconSize={iconSize}
+      onWheel={wheelHandler}
     />
   ) : (
     <SideButtons
@@ -121,6 +131,7 @@ const TouchSpin = ({
       onStopCounter={stopCounter}
       parentStyle={{ ...defaultParentStyle, ...parentStyle }}
       inputStyle={{ ...defaultInputStyle, ...inputStyle }}
+      onWheel={wheelHandler}
     />
   );
 };

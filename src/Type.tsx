@@ -26,6 +26,7 @@ export interface ChildProps {
   decimals?: number;
   parentStyle?: React.CSSProperties;
   inputStyle?: React.CSSProperties;
+  onWheel: (e: React.WheelEvent<HTMLInputElement>) => void;
 }
 export interface VerticalProps extends ChildProps {
   verticalUpClass?: string;

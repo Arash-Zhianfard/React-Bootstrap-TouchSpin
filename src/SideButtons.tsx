@@ -3,6 +3,7 @@ const SideButtons = ({
   onIncreaseHandler,
   onDecreaseHandler,
   onStopCounter,
+  onWheel,
   signAlignment,
   sign,
   counter,
@@ -19,7 +20,9 @@ const SideButtons = ({
   const stopCounter = () => {
     onStopCounter();
   };
-
+  const wheelHandler = (e: React.WheelEvent<HTMLInputElement>) => {
+    onWheel(e);
+  };
   return (
     <div className={`input-group`} style={parentStyle}>
       <div className="input-group-prepend">
@@ -40,6 +43,9 @@ const SideButtons = ({
         value={counter.toFixed(decimals)}
         readOnly
         style={inputStyle}
+        onWheel={(e) => {
+          wheelHandler(e);
+        }}
       />
       <div className="input-group-append">
         {sign && signAlignment === Alignment.Right && (

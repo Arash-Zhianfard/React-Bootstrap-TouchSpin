@@ -4,6 +4,7 @@ const VerticalButtons = ({
   onIncreaseHandler,
   onDecreaseHandler,
   onStopCounter,
+  onWheel,
   counter,
   decimals,
   verticalUpClass,
@@ -21,6 +22,9 @@ const VerticalButtons = ({
   const stopCounter = () => {
     onStopCounter();
   };
+  const wheelHandler = (e: React.WheelEvent<HTMLInputElement>) => {
+    onWheel(e);
+  };
   var upClass = verticalUpClass ? verticalUpClass : 'bi bi-caret-up-fill';
   var downClass = verticalDownClass
     ? verticalDownClass
@@ -37,6 +41,9 @@ const VerticalButtons = ({
         value={counter.toFixed(decimals)}
         className="form-control"
         style={inputStyle}
+        onWheel={(e) => {
+          wheelHandler(e);
+        }}
       />
       <span className="input-group-addon bootstrap-touchspin-postfix"></span>
       <span className="input-group-btn-vertical">
