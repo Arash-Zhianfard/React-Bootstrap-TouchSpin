@@ -4,12 +4,12 @@
   "description": "React-Bootstrap-Touch-Spin",
   "author": "Arash Zhianfard",
   "license": "MIT",
-  "repository": "https://github.com/Arash-Zhianfard/React-Bootstrap-TouchSpine",
+  "repository": "https://github.com/Arash-Zhianfard/React-Bootstrap-TouchSpin",
   "keywords": [
     "react",
     "hooks",
     "bootstrap",
-    "TouchSpin",
+    "touchSpin",
     "component"
   ],
   "main": "./lib/cjs/index.js",
