@@ -32,7 +32,7 @@ const SideButtons = ({
           onMouseUp={stopCounter}
           className="btn-right"
           value="-"      
-          name="decreaseSide"    
+          data-test="decreaseSide"    
         />
         {sign && signAlignment === Alignment.Left && (
           <span className="input-group-text">{sign}</span>
@@ -41,7 +41,7 @@ const SideButtons = ({
       <input
         type="text"
         className="form-control "
-        name="counterInput"
+        data-test="counterInput"
         value={counter.toFixed(decimals)}
         readOnly
         style={inputStyle}
@@ -59,7 +59,7 @@ const SideButtons = ({
           onMouseUp={stopCounter}
           className="btn-left"          
           value="+"
-          name="increaseSide" 
+          data-test="increaseSide" 
         />
       </div>
     </div>

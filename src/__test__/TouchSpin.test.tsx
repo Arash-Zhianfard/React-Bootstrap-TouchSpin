@@ -2,6 +2,7 @@
 // import { render, screen } from '@testing-library/react';
 import * as ReactDOM from 'react-dom';
 import TouchSpin from '../TouchSpin';
+import '@testing-library/jest-dom/extend-expect';
 
 describe('init test', () => {
   let container: HTMLDivElement;
@@ -18,8 +19,14 @@ describe('init test', () => {
   test('renders all elements correctly', () => {
     const inputs = container.querySelectorAll('input');
     expect(inputs).toHaveLength(3);
-    expect(inputs[0].name).toBe('decreaseSide');
-    expect(inputs[1].name).toBe('counterInput');
-    expect(inputs[2].name).toBe('increaseSide');
+    expect(
+      container.querySelector('[data-test="decreaseSide"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('[data-test="counterInput"]'),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('[data-test="increaseSide"]'),
+    ).toBeInTheDocument();
   });
 });
