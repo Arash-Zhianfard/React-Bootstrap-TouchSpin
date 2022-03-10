@@ -1,5 +1,5 @@
 // import '@testing-library/jest-dom';
-// import { render, screen } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import * as ReactDOM from 'react-dom';
 import TouchSpin from '../TouchSpin';
 import '@testing-library/jest-dom/extend-expect';
@@ -16,7 +16,7 @@ describe('init test side button', () => {
     document.body.removeChild(container);
     container.remove();
   });
-  test('renders all elements correctly', () => {    
+  test('renders all elements correctly', () => {
     expect(
       container.querySelector('[data-test="decrease"]'),
     ).toBeInTheDocument();
@@ -54,5 +54,24 @@ describe('init test vertical button', () => {
     expect(
       container.querySelector('[data-test="increase"]'),
     ).toBeInTheDocument();
+  });
+});
+
+describe('button events', () => {
+  let container: HTMLDivElement;
+  const handler = jest.fn();  
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.appendChild(container);
+    ReactDOM.render(<TouchSpin counterHandler={handler} />, container);
+  });
+  afterEach(() => {
+    document.body.removeChild(container);
+    container.remove();
+  });
+  test('increase event ', () => {
+    var increase = container.querySelector('[data-test="decrease"]');
+    fireEvent.click(increase!);
+    expect(handler).toHaveBeenCalledTimes(1);
   });
 });
