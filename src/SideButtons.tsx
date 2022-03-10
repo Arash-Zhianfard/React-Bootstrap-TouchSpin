@@ -32,7 +32,7 @@ const SideButtons = ({
           onMouseUp={stopCounter}
           className="btn-right"
           value="-"      
-          data-test="decreaseSide"    
+          data-test="decrease"    
         />
         {sign && signAlignment === Alignment.Left && (
           <span className="input-group-text">{sign}</span>
@@ -59,7 +59,7 @@ const SideButtons = ({
           onMouseUp={stopCounter}
           className="btn-left"          
           value="+"
-          data-test="increaseSide" 
+          data-test="increase" 
         />
       </div>
     </div>

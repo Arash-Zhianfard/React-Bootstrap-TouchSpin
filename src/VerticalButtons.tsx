@@ -40,6 +40,7 @@ const VerticalButtons = ({
         readOnly={true}
         value={counter.toFixed(decimals)}
         className="form-control"
+        data-test="counterInput"
         style={inputStyle}
         onWheel={(e) => {
           wheelHandler(e);
@@ -51,6 +52,7 @@ const VerticalButtons = ({
           className="btn btn-outline-secondary bootstrap-touchspin-up"
           onMouseDown={increaseHandler}
           onMouseUp={stopCounter}
+          data-test="increase"    
         >
           <span className={upClass} style={iconFontSize} />
         </span>
@@ -58,6 +60,7 @@ const VerticalButtons = ({
           className="btn btn-outline-secondary bootstrap-touchspin-down"
           onMouseDown={decreaseHandler}
           onMouseUp={stopCounter}
+          data-test="decrease"    
         >
           <span className={downClass} style={iconFontSize}/>
         </span>
