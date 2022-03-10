@@ -20,7 +20,7 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "prepublishOnly": "npm run build",
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "test:watch": "jest --watch"
   },
   "dependencies": {
