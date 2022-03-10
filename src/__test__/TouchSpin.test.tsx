@@ -68,10 +68,16 @@ describe('button events', () => {
   afterEach(() => {
     document.body.removeChild(container);
     container.remove();
+    jest.clearAllMocks();
   });
   test('increase event ', () => {
-    var increase = container.querySelector('[data-test="decrease"]');
+    var increase = container.querySelector('[data-test="increase"]');
     fireEvent.click(increase!);
+    expect(handler).toHaveBeenCalledTimes(1);
+  });
+  test('decrease event ', () => {
+    var decrease = container.querySelector('[data-test="decrease"]');
+    fireEvent.click(decrease!);
     expect(handler).toHaveBeenCalledTimes(1);
   });
 });
