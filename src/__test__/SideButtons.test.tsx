@@ -29,35 +29,7 @@ describe('init test side button', () => {
   });
 });
 
-describe('init test vertical button', () => {
-  let container: HTMLDivElement;
-  beforeEach(() => {
-    const handler = jest.fn();
-    container = document.createElement('div');
-    document.body.appendChild(container);
-    ReactDOM.render(
-      <TouchSpin counterHandler={handler} verticalButtons={true} />,
-      container,
-    );
-  });
-  afterEach(() => {
-    document.body.removeChild(container);
-    container.remove();
-  });
-  test('renders all elements correctly', () => {
-    expect(
-      container.querySelector('[data-test="decrease"]'),
-    ).toBeInTheDocument();
-    expect(
-      container.querySelector('[data-test="counterInput"]'),
-    ).toBeInTheDocument();
-    expect(
-      container.querySelector('[data-test="increase"]'),
-    ).toBeInTheDocument();
-  });
-});
-
-describe('button events', () => {
+describe('side buttons event', () => {
   let container: HTMLDivElement;
   const handler = jest.fn();  
   beforeEach(() => {
