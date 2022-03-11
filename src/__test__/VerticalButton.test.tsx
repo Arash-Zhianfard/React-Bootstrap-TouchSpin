@@ -37,7 +37,10 @@ describe('vertical buttons event', () => {
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
-    ReactDOM.render(<TouchSpin counterHandler={handler} verticalButtons={true} />, container);
+    ReactDOM.render(
+      <TouchSpin counterHandler={handler} min={10} verticalButtons={true} />,
+      container,
+    );
   });
   afterEach(() => {
     document.body.removeChild(container);
@@ -54,5 +57,15 @@ describe('vertical buttons event', () => {
     fireEvent.click(decrease!);
     expect(handler).toHaveBeenCalledTimes(1);
   });
-  
+  test('min value', () => {
+    var decrease = container.querySelector('[data-test="decrease"]');
+    fireEvent.change(decrease!, { target: { value: '9' } });
+    var v=container.querySelector('[data-test="counterInput"]');
+    
+    for (var i = 0; i < 10; i++) {
+      fireEvent.click(decrease!);      
+    }
+    expect(v!).to('10');
+    expect(handler).toHaveBeenCalledTimes(10);
+  });
 });
